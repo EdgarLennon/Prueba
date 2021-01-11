@@ -1,0 +1,61 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../src_principal/img/back.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+:any-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.principal {
+  border: red 2px solid transparent;
+  width: 500px;
+  height: auto;
+  margin: auto;
+  margin-top: 15%;
+}
+
+.contenedor {
+  width: 40px;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: auto;
+  gap: 10px;
+  padding: 50px;
+}
+.diseño {
+  border: #000 2px solid;
+  width: 200px;
+  height: 100px;
+  padding: 30px;
+  border-radius: 10%;
+  text-align: center;
+}
+.diseño:hover {
+  color: #fff;
+  background-color: gray;
+}
+
+@media screen and (max-width: 800px) {
+  .formulario {
+    grid-template-columns: 1fr;
+  }
+  .formulario__grupo-terminos,
+  .formulario__mensaje,
+  .formulario__grupo-btn-enviar {
+    grid-column: 1;
+  }
+
+  .diseño {
+    width: 100%;
+  }
+}
