@@ -3,26 +3,53 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+@font-face {
+  font-family: "ella";
+  src: url(../logo.ttf);
+}
 body {
   background-image: url("../src_principal/img/back.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
-
+/*----------------------------------CABECERA---------------------------------------------------------*/
+.imagen {
+  width: 6em;
+  height: 6em;
+  border-radius: 100%;
+}
 :any-link {
   text-decoration: none;
   color: #000;
 }
-
+:any-link:hover {
+  color: #fff;
+}
+.cabecera {
+  height: auto;
+}
+#estilo {
+  color: #000;
+}
+#estilo:hover {
+  color: #000;
+}
+.contenido {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column: auto;
+  gap: -40px;
+  padding: 10px;
+  align-content: initial;
+}
+/*----------------------------------CAJA---------------------------------------------------------*/
 .principal {
   border: red 2px solid transparent;
   width: 500px;
   height: auto;
   margin: auto;
-  margin-top: 15%;
+  margin-top: 10%;
 }
-
 .contenedor {
   width: 40px;
   height: auto;
@@ -33,29 +60,40 @@ body {
   padding: 50px;
 }
 .diseño {
-  border: #000 2px solid;
+  border: red 1px solid transparent;
+  background-color: #e0e6f8;
   width: 200px;
   height: 100px;
   padding: 30px;
+
   border-radius: 10%;
   text-align: center;
+  font-size: 2em;
+  transition: 1sg;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 .diseño:hover {
-  color: #fff;
-  background-color: gray;
+  color: #000;
+  background-color: #806eea;
 }
-
-@media screen and (max-width: 800px) {
-  .formulario {
+/*----------------------------------RESPONISVE---------------------------------------------------------*/
+@media screen and (max-width: 800px min-width 400px) {
+  .principal {
     grid-template-columns: 1fr;
   }
-  .formulario__grupo-terminos,
-  .formulario__mensaje,
-  .formulario__grupo-btn-enviar {
+  .cabecera,
+  .contenido,
+  .diseño,
+  .principal {
     grid-column: 1;
   }
 
   .diseño {
     width: 100%;
+  }
+  .principal {
+    margin-left: 200px;
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }

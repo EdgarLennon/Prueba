@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "ella";
+  src: url(../logo.ttf);
+}
+.imagen {
+  margin-left: -25px;
+  width: 120px;
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 100%;
+}
+.maquina {
+  font-size: 25px;
+  font-family: ella;
+  line-height: 1.5;
+  margin-top: -90px;
+  margin-left: 100px;
+}
